@@ -1,0 +1,25 @@
+overwrite: true
+ignoreNoDocuments: true
+schema: http://localhost:5001/api
+documents: './src/gql/documents/**/*.gql'
+generates:
+  ./src/gql/generated_react_query.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-query
+    config: {
+      fetcher: {
+        endpoint: 'http://localhost:5001/api',
+        fetchParams: {
+          headers: {
+            'My-Header': 'SomeValue',
+            'Content-type': 'application/json',
+          }
+        }
+      }
+    }
+config:
+  withHOC: true
+  withHooks: true
+

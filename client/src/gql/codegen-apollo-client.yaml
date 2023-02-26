@@ -1,0 +1,14 @@
+overwrite: true
+ignoreNoDocuments: true
+schema: http://localhost:5001/api
+documents: './src/gql/documents/**/*.gql'
+generates:
+  ./src/gql/generated_apollo_client.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo
+config:
+  withHOC: true
+  withHooks: true
+
