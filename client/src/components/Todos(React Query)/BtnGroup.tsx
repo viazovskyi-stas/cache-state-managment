@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { flushSync } from 'react-dom'
 import { Box, Button, TextField } from '@mui/material'
 import { useAddTodoMutation, TodoInput } from '../../gql/generated_react_query'
 import { useQueryClient } from '@tanstack/react-query'

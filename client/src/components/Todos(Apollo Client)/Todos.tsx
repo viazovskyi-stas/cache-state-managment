@@ -1,9 +1,7 @@
 import React, { memo, useEffect } from 'react'
-import { Box } from '@mui/material'
 import { makeStyles } from '@mui/styles'
 import TodoItem from './TodoItem'
-// import { useQuery, gql } from '@apollo/client'
-import { useGetTodosQuery, useGetTodosLazyQuery } from '../../gql/generated_apollo_client'
+import { useGetTodosLazyQuery } from '../../gql/generated_apollo_client'
 
 const useStyles = makeStyles({
   container: {
@@ -15,25 +13,8 @@ const useStyles = makeStyles({
   },
 })
 
-// interface Todo {
-//   id: number
-//   title: string
-// }
-//
-// const GET_TODOS = gql`
-//   query GetTodos {
-//     getTodos {
-//       id
-//       title
-//     }
-//   }
-// `
-
 const Todos = () => {
   const classes = useStyles()
-
-  // const getTodosQuery = useQuery<{ getTodos: Todo[] }>(GET_TODOS)
-  // const getTodosQuery = useGetTodosQuery()
   const [getTodos, { data, loading }] = useGetTodosLazyQuery()
 
   useEffect(() => {

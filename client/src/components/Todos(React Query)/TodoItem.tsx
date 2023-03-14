@@ -6,10 +6,8 @@ import PendingIcon from '@mui/icons-material/Pending'
 import {
   useDeleteTodoMutation,
   Todo,
-  GetTodosDocument,
-  useGetTodosQuery,
 } from '../../gql/generated_react_query'
-import { useMutation, useQueryClient } from '@tanstack/react-query'
+import { useQueryClient } from '@tanstack/react-query'
 
 const useStyles = makeStyles({
   container: {

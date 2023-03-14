@@ -1,6 +1,6 @@
-import React, { memo, useEffect } from 'react'
+import React, { memo } from 'react'
 import TodoItem from './TodoItem'
-import { Todo, useGetTodosQuery } from '../../gql/generated_react_query'
+import { useGetTodosQuery } from '../../gql/generated_react_query'
 
 const Todos = () => {
   const { data, error, isLoading } = useGetTodosQuery()

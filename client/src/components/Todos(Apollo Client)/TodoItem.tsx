@@ -1,9 +1,8 @@
-import React, { memo, useState } from 'react'
+import React, { memo } from 'react'
 import { Box } from '@mui/material'
 import { makeStyles } from '@mui/styles'
 import DeleteIcon from '@mui/icons-material/Delete'
 import PendingIcon from '@mui/icons-material/Pending'
-// import { useDeleteTodoMutation } from '../../gql'
 import { useDeleteTodoMutation, Todo, GetTodosDocument } from '../../gql/generated_apollo_client'
 
 const useStyles = makeStyles({
